@@ -1,1 +1,16 @@
+#40. Programa que calcule la suma de los N primeros números naturales, donde N es un número digitado por el usuario. 
 
+i = 0
+
+num = int(input("Cuantos numeros quiere sumar: "))
+
+lista = []
+
+while i<num:
+    i+=1
+    lista.append(i)
+print(lista)
+
+suma = sum(lista)
+
+print(f"La suma de los numeros solicitados es {suma}")
