@@ -1,4 +1,17 @@
-#40. Programa que calcule la suma de los N primeros números naturales, donde N es un número digitado por el usuario. 
+#39. Programa que encuentre el resultado de la operación potencia donde el usuario ingresa el valor de la base y el exponente. 
+
+base = float(input("Ingrese el valor de la base: "))
+expo = float(input("Ingrese el valor del exponente: "))
+
+while expo<0:
+    print("Error el exponente debe ser positivo")
+    expo = float(input("Ingrese el valor del exponente: "))
+
+ope = base**expo
+
+print(f"El resultado de {base} elevado a la {expo} es de {ope}")
+
+######40. Programa que calcule la suma de los N primeros números naturales, donde N es un número digitado por el usuario. 
 
 i = 0
 
@@ -14,3 +27,144 @@ print(lista)
 suma = sum(lista)
 
 print(f"La suma de los numeros solicitados es {suma}")
+#41. Programa que reciba un listado de N números ingresados por el usuario y luego determine el número mayor y el número menor de entre todos los datos ingresados.   
+
+lista = []
+i = 0
+n = int(input("Cuantos numeros desea ingresar: "))
+
+while i<n:
+    num = int(input("Digite el numero: "))
+    i+=1
+    lista.append(num)
+print(lista)
+menor = min(lista)
+mayor = max(lista)
+
+print(f"El numero mayor es {mayor} y el menor es {menor}")
+
+#42. Programa que permita obtener el cubo, la cuarta y la quinta potencia de N números ingresados por el usuario.  
+
+def obtener_potencias(numeros):
+    potencias = []
+    for numero in numeros:
+        potencias.append([numero**3, numero**4, numero**5])
+    return potencias
+
+def main():
+    numeros = []
+    continuar = True
+
+    while continuar:
+        try:
+            numero = int(input("Ingrese un número o escriba 'fin' para terminar: "))
+            numeros.append(numero)
+        except ValueError:
+            if input("¿Desea terminar? (s/n): ").lower() == 's':
+                continuar = False
+
+    if numeros:
+        potencias = obtener_potencias(numeros)
+
+        print("Potencias de los números ingresados:")
+        for i, potencia in enumerate(potencias, start=1):
+            print(f"Número {i}: Cubo={potencia[0]}, Cuarta={potencia[1]}, Quinta={potencia[2]}")
+    else:
+        print("No se han ingresado números.")
+
+if __name__ == "__main__":
+    main()
+
+#43. Programa que permita ingresar N números y determine cuantas veces aparece el mismo número, dicho número a buscar debe solicitarse al usuario al inicio del programa.
+
+def contar_repeticiones(numero_buscado, numeros):
+    contador = 0
+    for numero in numeros:
+        if numero == numero_buscado:
+            contador += 1
+    return contador
+
+
+def main():
+    numero_buscado = float(input("Ingrese el número que desea buscar: "))
+    numeros = []
+    i = 0
+    while i<numero_buscado:
+            numero = float(input("Ingrese un número: "))
+            numeros.append(numero)
+            i+=1
+    repeticiones = contar_repeticiones(numero_buscado, numeros)
+    print(f"El número {numero_buscado} aparece {repeticiones} veces en la lista de números.")
+if __name__ == "__main__":
+    main()
+
+#44. Programa que reciba N calificaciones de una materia, y luego calcule: a) La nota promedio b) La nota mayor c) Si El estudiante pasa o no la materia (Promedio>=40) 
+
+cal = int(input("Cuantas notas quiere ingresar: "))
+i = 0
+lista_not = []
+
+while i<cal:
+    notas = float(input("Digite la nota: "))
+    lista_not.append(notas)
+    i += 1
+print(lista_not)
+
+suma = sum(lista_not)
+
+prom = suma/cal
+
+max_nota = max(lista_not)
+
+print(f"El promedio fue de {prom}")
+print(f"La nota maxima fue de {max_nota}")
+
+if prom >= 4.0:
+    print(f"Pasas la materia con {prom}")
+else: 
+    print(f"No pasas la materia con {prom}")
+
+#45. Programa  que  permita  calcular  el  factorial  de  un  número.  El  factorial  corresponde  a  la multiplicación de todos los números naturales anteriores incluyendo el número ingresado. 
+
+num = int(input("Ingresa un número: "))
+
+factorial = 1
+i = 1
+
+if num < 0:
+    print("El factorial no está definido para números negativos.")
+elif num == 0:
+    print("El factorial de 0 es 1")
+else:
+    while i <= num:
+        factorial *= i
+        i += 1
+    print("El factorial de", num, "es", factorial)
+
+#46. Programa que permita calcular el valor a pagar en una caja registradora donde se reciben N productos y se ingresan los precios de uno en uno.
+
+cant = int(input("Cuantos productos va a pagar: "))
+i = 0
+lista = []
+while i < cant:
+    prod = float(input("Digite el valor del producto: "))
+    i +=1
+    lista.append(prod)
+
+total = sum(lista)
+
+print(f"El total es de {total:.3f}")
+
+#47. Crear un Programa que permita conocer la mayor estatura dentro un grupo de N estudiantes.  
+
+n = int(input("Cuantos estudiantes son: "))
+lista = []
+i = 0 
+while i < n:
+    estat = float(input("Digite su estatura: "))
+    lista.append(estat)
+    i+= 1
+max_alt = max(lista)
+
+print(f"La mayor estatura es de {max_alt:.2f} mts")
+
