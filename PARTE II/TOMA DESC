@@ -28,7 +28,7 @@ else:
 
 #13. Programa para determinar cuál es mayor entre 2 números cualquiera ingresados por el usuario
 print("¿Qué número es mayor?")  #EJ13
-numMA= float(input("ingrese el primer numero: "))
+numMA= float(input("ingrese el primer numero: ")) 
 numME = float(input("ingrese el segundo numero: "))
 if numMA > numME:
     print("El mayor de los dos es: " + str(numMA))
