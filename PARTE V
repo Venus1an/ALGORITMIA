@@ -13,14 +13,14 @@ print(f"El resultado de {base} elevado a la {expo} es de {ope}")
 
 ######40. Programa que calcule la suma de los N primeros números naturales, donde N es un número digitado por el usuario. 
 
-i = 0
+i = 0 #inicializamos la variable el zero
 
-num = int(input("Cuantos numeros quiere sumar: "))
+num = int(input("Cuantos numeros quiere sumar: ")) #usuario ingresa un numero por teclado
 
-lista = []
+lista = [] #incializamos variable tipo lista
 
-while i<num:
-    i+=1
+while i<num: #si la condición es verdadero se ejecuta
+    i+=1 #contador
     lista.append(i)
 print(lista)
 
