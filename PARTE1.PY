@@ -42,7 +42,7 @@ d=(input("4."))
 e=(input("5."))
 print=inter("El promedio de estos es: ",(a*b*c*d*e/a+b+c+d+e))
 
-9. Programa que permita a una tienda saber el valor que pagara un cliente por la compra de varios elementos de la misma referencia. Debe tener como entradas el valor unitario, la cantidad de productos comprados y al valor final se debe adicionar el 16% correspondiente al IVA.   
+#9. Programa que permita a una tienda saber el valor que pagara un cliente por la compra de varios elementos de la misma referencia. Debe tener como entradas el valor unitario, la cantidad de productos comprados y al valor final se debe adicionar el 16% correspondiente al IVA.   
 
 cantidad = int(input("Cuantos productos compro: "))
 valorunit = float(input("De cuanto es el valor unitario: "))
