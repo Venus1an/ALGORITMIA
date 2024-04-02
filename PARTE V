@@ -13,20 +13,24 @@ print(f"El resultado de {base} elevado a la {expo} es de {ope}")
 
 ######40. Programa que calcule la suma de los N primeros números naturales, donde N es un número digitado por el usuario. 
 
-i = 0 #inicializamos la variable el zero
+print("                    SUMA DE NUMEROS NATURALES")
 
-num = int(input("Cuantos numeros quiere sumar: ")) #usuario ingresa un numero por teclado
+i = 0 #inicializamos la variable en zero
 
-lista = [] #incializamos variable tipo lista
+print("Ingresa el numero de digitos que quieres sumar\nNota:Estos se tomaran en orden consecutivo")  #usuario ingresa un numero por teclado
+num = int(input())
+list = [] #incializamos variable tipo lista
 
 while i<num: #si la condición es verdadero se ejecuta
     i+=1 #contador
-    lista.append(i)
-print(lista)
+    list.append(i)
+print(list)
 
-suma = sum(lista)
+suma = sum(list)
 
-print(f"La suma de los numeros solicitados es {suma}")
+print(f"El total de la suma de estos numeros es: {suma}")
+
+
 #41. Programa que reciba un listado de N números ingresados por el usuario y luego determine el número mayor y el número menor de entre todos los datos ingresados.   
 
 lista = []
