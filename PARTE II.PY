@@ -120,25 +120,24 @@ elif num % 2 != 0:
 
 #21. Programa el cual permita ingresar los valores de temperatura de cada día durante una semana. Le programa debe calcular la temperatura promedio y luego mostrar los siguientes mensajes: a) Si el promedio es mayor a 35° mostrar el mensaje “Que semana tan calurosa” b) Si el promedio esta entre 15° y 35° mostrar el mensaje “Que clima tan delicioso” c) Si el promedio es menor de 15° mostrar el mensaje “Que semana tan fría”.
 
-dia1 = int(input("Temperatura del dia 1: "))
-dia2 = int(input("Temperatura del dia 2: "))
-dia3 = int(input("Temperatura del dia 3: "))
-dia4 = int(input("Temperatura del dia 4: "))
-dia5 = int(input("Temperatura del dia 5: "))
-dia6 = int(input("Temperatura del dia 6: "))
-dia7 = int(input("Temperatura del dia 7: "))
-
-dia_prom = (dia1+dia2+dia3+dia4+dia5+dia6+dia7)/7
-
-if dia_prom > 35:
-    print("Que semana tan calurosa")
-    print(f"El clima promedio fue de {dia_prom:.2f}°")
-elif dia_prom >= 15 and dia_prom <= 35:
-    print("Que clima tan delicioso")
-    print(f"El clima promedio fue de {dia_prom:.2f}°")
-elif dia_prom < 15: 
-    print("Que semana tan fria")
-    print(f"El clima promedio fue de {dia_prom:.2f}°")
+print("           TEMPERATURA PROMEDIO SEMANAL"         )
+lunes=int(input("Ingrese la temperatura del dia lunes: "))
+martes=int(input("Ingrese la temperatura del dia martes: "))
+miercoles=int(input("Ingrese la temperatura del dia miercoles: "))
+jueves=int(input("Ingrese la temperatura del dia jueves: "))
+viernes=int(input("Ingrese la temperatura del dia viernes: "))
+sabado=int(input("Ingrese la temperatura del dia sabado: "))
+domingo=int(input("Ingrese la temperatura del dia domingo: "))
+promedio=(lunes+martes+miercoles+jueves+viernes+sabado+domingo)/7
+print("La temperatura promedio de esta semana es de: ", promedio,"°")
+if promedio>=35:
+    print("Que semana tan calurosa!")
+elif promedio<=35 and promedio>=15:
+    print("Que clima tan delicioso!")
+elif promedio<15:
+    print("Que semana tan fria!")
+else:
+    print("ALERTA CLIMAS EXTREMOS")
 
 #22. Programa que permita calcular el valor final a pagar en una súper tienda en donde se aplican los siguientes descuentos: a) Por compras entre 10000 y 20000 el 10% b) Por compras entre 20001 y 50000 el 30% c) Por compras superiores a 50000 el 50%.
 
