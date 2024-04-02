@@ -1,39 +1,39 @@
 #11. Programa que determine si una persona es mayor de edad o no teniendo en cuenta el año actual y su año de nacimiento.
 
-añoac = int(input("Año actual: "))
-añona = int(input("Año de nacimiento: "))
+print(                       "AÑO 2024")
 
-edad = añoac-añona
-
-print (f"Tu edad es de: {edad}")
-
-if edad >= 18:
-    print("Eres mayor de edad")
+print("Ingrese año de nacimiento: ")
+añoncm=int(input())
+if añoncm<= 2006:
+    print("Este usuario es mayor de edad")
 else:
-    print("Eres menor de edad")
+    print("Este usuario es menor de edad")
+
 
 #12. Programa para determinar si un número cualquiera ingresado por el usuario es o no positivo. 
 
-num1 = int(input("Digite un numero: "))
-num2 = int(input("Digite un numero: ")) 
-
-if num1 > 0 and num2 > 0:
-    print("Los dos son positivos")
-elif num1 < 0 and num2 > 0:
-    print(f"El numero {num1} es negativo y el numero {num2} es positivo")
-elif num1 > 0 and num2 < 0:
-    print(f"El numero {num2} es negativo y el numero {num1} es positivo")
+print("Ingrese un número: ")
+num=float(input())
+if num>0:
+    print("Este número es positivo")
+elif num ==0:
+    print("Este número es neutro", num)
 else:
-    print("Los dos son negativos")
+    print("Este usuario es negativo")
+
 
 #13. Programa para determinar cuál es mayor entre 2 números cualquiera ingresados por el usuario
-print("¿Qué número es mayor?")  #EJ13
-numMA= float(input("ingrese el primer numero: ")) 
-numME = float(input("ingrese el segundo numero: "))
-if numMA > numME:
-    print("El mayor de los dos es: " + str(numMA))
+num1= float(input("ingrese el primer numero: "))
+num2 = float(input("ingrese el segundo numero: "))
+if num1 > num2:
+    print("El mayor de los dos es: " + str(num1))
+elif num1==num2:
+    print("Son el mismo valor")
+else:
+    print ("El mayor de los 2 es: " + str (num2))
 else:
     print ("El mayor de los 2 es: " + str (numME))
+
 #14. Programa para saber si un estudiante del Enrique Olaya Herrera requiere refrigerio. Por disposición de la secretaria de Educación requieren refrigerio los estudiantes de grado sexto hacia abajo.
 
 grado = int(input("Que grado esta cursando: "))
