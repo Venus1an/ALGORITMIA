@@ -24,8 +24,7 @@ print("edad: ",c)
 print("Descuento de 20% en todos los jeans") 
 j=int(input("Ingresa el precio original del jean: "))
 d= j*20/100
-p=j-d
-print("El precio final es: $",p)
+print("El precio final es: $",d)
 
 
 #6. Programa que permita calcular el 30%, el 60% y el 90% de un número cualquiera 
