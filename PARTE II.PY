@@ -66,26 +66,19 @@ else:
 
 #17. Programa en el cual reciba como entradas la siguiente información: Código del Estudiante, Nombre del Estudiante, Nombre de la Materia y Tres Notas de 1.0 a 5.0. Con esta información el programa debe calcular la nota definitiva (promedio) y determinar si el estudiante aprueba o no la materia.   
 
-cod = int(input("Digite su codigo de estudiante: "))
-nom = input("Digite su numbre: ")
-mat = input("Digite la materia: ")
+nombre=(input("Ingrese el nombre del estudiante: "))
+codigo=(input("Ingrese código del estudiante: "))
+materia=(input("Materia: "))
+nota1=float(input("Ingrese la primera nota: "));nota2=float(input("Ingrese la segunda nota: "));nota3=float(input("Ingrese la tercera nota: "))
+promedio=(nota1+nota2+nota3)/3
 
-not1 = float(input("Digite la primera nota: "))
-not2 = float(input("Digite la segunda nota: "))
-not3 = float(input("Digite la tercera nota: "))
 
-prom = (not1+not2+not3)/3
-
-if prom >= 4.0:
-    print(nom)
-    print(cod)
-    print(mat)
-    print("¡Aprobo!")
+if 4.0<=promedio<5.0:
+    print(f"El estudiante: {nombre}\nCodigo:{codigo}\nMateria:{materia}\n APRUEBA")
+elif promedio<4.0:
+    print(f"El estudiante:{nombre}\nCodigo:{codigo}\nMateria:{materia}\n REPRUEBA")
 else:
-    print(nom)
-    print(cod)
-    print(mat)
-    print("No aprobo")
+    print("Evaluar nuevamente")
 
 #18. Programa para determinar cuánto pagara una persona por una compra de la cual se sabe la cantidad de artículos y el valor unitario. Se debe tener en cuenta que el almacén hace un 20% de descuento cuando la compra supera $100000. 
 
