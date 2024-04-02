@@ -111,12 +111,11 @@ elif total < 20000:
     print(f"El valor con descuento: {total_f}")
 #20. Programa para determinar si un número cualquiera ingresado por el usuario es par o impar.(Usar operación Modulo).
 
-num = int(input("Digite un numero: "))
-
-if num % 2 == 0: 
-    print ("El numero es par")
-elif num % 2 != 0:
-    print ("El numero es impar")
+num1=int(input("Ingresa un número: "))
+if num1 % 2 == 0:
+     print("El número es par.")
+else:
+     print("El número es impar.")
 
 #21. Programa el cual permita ingresar los valores de temperatura de cada día durante una semana. Le programa debe calcular la temperatura promedio y luego mostrar los siguientes mensajes: a) Si el promedio es mayor a 35° mostrar el mensaje “Que semana tan calurosa” b) Si el promedio esta entre 15° y 35° mostrar el mensaje “Que clima tan delicioso” c) Si el promedio es menor de 15° mostrar el mensaje “Que semana tan fría”.
 
