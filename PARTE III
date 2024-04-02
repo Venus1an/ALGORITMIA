@@ -1,1 +1,36 @@
+#24Programa que permita determinar si una letra es o no vocal
+print("    ¿ES ESTA LETRA UNA VOCAL O UNA CONSONANTE?")
+letra=str(input("Ingresa una letra: "))
 
+
+if letra==("a"):
+    print("Esta letra es una vocal.")
+elif letra==("e"):
+    print("Esta letra es una vocal.")
+elif letra==("i"):
+    print("Esta letra es una vocal.")
+elif letra==("o"):
+    print("Esta letra es una vocal.")
+elif letra==("u"):
+    print("Esta letra es una vocal.")
+else:
+    print("Es una consonante.")
+
+
+
+#25. Programa que permita realizar los siguientes requerimientos: 
+n=int(input("Seleccione una opción:\n1.Calcular distancia recorrida\n2.Calcular tiempo\n3.Calcular velocidad\n"))
+if n==1:
+    print("¿Cual es la distancia recorrida? ")
+    v=float(input("¿Cuál es la velocidad?"))
+    t=float(input("¿Cuál es el tiempo?"))
+    print("La distancia es: ", v*t, "km/h")
+elif n==2:
+    print("Calcular Tiempo: ")
+elif n==3:
+    print("Calcular velocidad: ")
+else:
+    print("ERROR")
+n1=int(input("Distancia recorrida"))
+n2=int(input("Tiempo"))
+n3=int(input("Velocidad"))
