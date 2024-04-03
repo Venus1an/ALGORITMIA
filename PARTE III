@@ -18,19 +18,32 @@ else:
 
 
 
-#25. Programa que permita realizar los siguientes requerimientos: 
+#25. Programa que permita realizar los siguientes requerimientos: 1. Calcular distancia recorrida 2.
+"""Calcular tiempo 3. Calcular velocidad
+Dependiendo de lo que seleccione el usuario se debe solicitar los datos correspondientes y la
+operación  adecuada, teniendo en cuenta el movimiento rectilíneo uniforme cuya principal ecuación
+es: X=V*T. """
+
+
 n=int(input("Seleccione una opción:\n1.Calcular distancia recorrida\n2.Calcular tiempo\n3.Calcular velocidad\n"))
 if n==1:
-    print("¿Cual es la distancia recorrida? ")
-    v=float(input("¿Cuál es la velocidad?"))
-    t=float(input("¿Cuál es el tiempo?"))
+    print("Calcular distancia ")
+    v=float(input("¿Calcular velocidad"))
+    t=float(input("Calcular tiempo"))
     print("La distancia es: ", v*t, "km/h")
 elif n==2:
     print("Calcular Tiempo: ")
+
+    v=float(input("¿Cuál es la velocidad?"))
+
+    d=float(input("¿Cuál es la distancia?"))
+    print("El tiempo del recorrido es: ", d/v)
+    
 elif n==3:
     print("Calcular velocidad: ")
+    t=float(input("¿Cuál es el tiempo?"))
+    d=float(input("¿Cuál es la distancia?"))
+    print("La velocidad es: ", d/t)
 else:
     print("ERROR")
-n1=int(input("Distancia recorrida"))
-n2=int(input("Tiempo"))
-n3=int(input("Velocidad"))
+
