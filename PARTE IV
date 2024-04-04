@@ -1,1 +1,125 @@
+#30. Programa que imprima los números impares entre 201 y 499
+
+for i in range(201, 500):
+    if i%2 != 0:
+        print(i)
+
+#31. Programa que permita determinar cuántos estudiantes son mayores de edad en un grupo de 20 estudiantes.
+
+mayores = 0
+
+for i in range(0, 20):
+    edad = int(input("Cual es su edad: "))
+    if edad >= 18:
+        mayores+=1
+print(f"Los estudiantes mayores de edad son {mayores}")
+
+#32. Programa  que  permita  determinar  cuántos  hombres  y  mujeres  hay  en  un  curso  de  25 estudiantes.  
+
+mujeres = 0
+hombre = 0
+
+for i in range(0,25):
+    print("\t H o M")
+    p = input("Hombre o Mujer: ").upper()
+    if p == 'H':
+        hombre+=1
+    elif p == 'M':
+        mujeres+=1
+    else:
+        print("Error")
+print(f"La candidad de mujeres son {mujeres}")
+print(f"La candidad de hombres son {hombre}")
+
+#33. Programa para calcular la edad promedio de un grupo de 15 estudiantes.
+
+lista = []
+
+for i in range(0,15):
+    edad = int(input("Cual es tu edad:"))
+    lista.append(edad)
+print(lista)
+
+suma = sum(lista)
+
+prom = suma/15
+
+print(f"La edad promedio es de {prom}")
+
+#34.  Programa que permita calcular la estatura promedio de un grupo de 18 estudiantes y luego tomar las siguientes decisiones: a) Si la estatura promedio es menor a 140 cm imprimir un mensaje que diga “Estudiantes muy bajos”. b) Si la estatura promedio se encuentra entre 140 y 170 cm imprimir “Estudiantes de estatura normal”. c) Si la estatura promedio es mayor de 170 cm imprimir “Estudiantes muy altos”. 
+
+lista = []
+
+for i in range(0,18):
+    estat = int(input("Cual es su estatura en cm: "))
+    lista.append(estat)
+print(lista)
+
+suma = sum(lista)
+prom = suma/18
+
+if prom < 140:
+    print("Estudiantes muy bajos")
+elif prom >= 140 and prom <= 170:
+    print("Estudiantes de estatura normal")
+elif prom > 170:
+    print("Estudiantes muy altos")
+
+#35.Programa que muestre en pantalla los múltiplos de 3 teniendo como límite el número 99.
+
+mult = []
+
+for i in range(1, 100):
+    if i % 3 == 0:
+        mult.append(i)
+print(mult)       
+
+# 36. Programa que imprima la tabla de multiplicar hasta 10 de un número cualquiera ingresado por el usuario. 
+
+mult = int(input("De que numero quiere ver la tabla de multiplicar: "))
+
+for i in range(0,10):
+    i +=1
+    tabla = mult*i
+    print(f"{mult} * {i} : {tabla}")
+
+#37. Realizar un Programa que permita visualizar en pantalla los múltiplos de 5 hasta el número 100.
+
+mult = []
+
+for i in range(1,101):
+    if i%5==0:
+        mult.append(i)
+print(mult)
+
+#38. Programa que permita determinar si un estudiante que recibe 15 notas gana o no la materia de Programación De Software. Se gana la materia si el promedio es mayor o igual a 4.0.
+
+notas = []
+
+for i in range(1,16):
+    nota = float(input(f"Digite la nota {i}: "))
+    notas.append(nota)
+print(notas)
+
+suma = sum(notas)
+prom = suma/15
+
+if prom >= 4.0:
+    print(f"Pasate la materia con una nota {prom}")
+else:
+    print(f"No pasaste la materia por tener la nota en {prom}")
+
+#39. Programa que encuentre el resultado de la operación potencia donde el usuario ingresa el valor de la base y el exponente. 
+
+base = float(input("Ingrese el valor de la base: "))
+expo = float(input("Ingrese el valor del exponente: "))
+
+while expo<0:
+    print("Error el exponente debe ser positivo")
+    expo = float(input("Ingrese el valor del exponente: "))
+
+ope = base**expo
+
+print(f"El resultado de {base} elevado a la {expo} es de {ope}")
+
 
