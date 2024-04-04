@@ -47,3 +47,63 @@ elif n==3:
 else:
     print("ERROR")
 
+#26. Programa que permita ingresar un número cualquiera y luego mostrar el siguiente menú: 1. Determinar si es positivo o negativo 2. Determinar si es par o impar. El programa debe realizar las operaciones que el usuario seleccione del menú.
+
+num = int(input("Digite un numero: "))
+
+print("\t.:MENU:.")
+print("1. Determinar si es positivo o negativo.")
+print("2. Determinar si es par o impar.")
+
+n = int(input("Elija una opción: "))
+
+if n == 1:
+    if num > 0:
+        print("El numero es positivo")
+    else:
+        print("El numero es negativo")
+elif n == 2:
+    if num % 2 == 0:
+        print("El numero es par")
+    else: 
+        print("El numero es impar")
+
+#27. Programa que muestre un menú que tenga las siguientes opciones: 1. Pasa o no la materia? 2. Es mayor o menor de edad? Caso 1: Solicitar 3 notas y determinar si el promedio es mayor a 3.0, en ese caso el estudiante pasa. Caso 2: Se debe solicitar el año de nacimiento y el año actual y determinar si es o no mayor de edad.
+
+print("\t.:MENU:.")
+print("1. Pasa o no la materia")
+print("2. Es mayor o menor de edad")
+
+n = int(input("Eliga una opción: "))
+
+if n == 1:
+    nota1 = float(input("Digite la primera nota: "))
+    nota2 = float(input("Digite la segunda nota: "))
+    nota3 = float(input("Digite la tercera nota: "))
+    prom = (nota1+nota2+nota3)/3
+    if prom >= 3.0:
+        print("¡Paso la materia!")
+    else:
+        print("No pasas la materia")
+elif n == 2:
+    año_ac = int(input("Año actual: "))
+    año_na = int(input("Año de nacimiento: "))
+    edad = año_ac-año_na
+    if edad >= 18:
+        print("Eres mayor de edad")
+    else: 
+        print("Eres menor de edad")
+else:
+    print("Error")
+
+#28. Programa que permita ver los números naturales comprendidos entre 0 y 1000
+
+for i in range(1001):
+    print(i)
+
+#29. Programa que imprima los pares de entre 0 y 200
+
+for i in range(0, 201):
+    if i%2 == 0:
+        print(i)
+
