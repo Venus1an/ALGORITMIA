@@ -1,1 +1,389 @@
 
+#53. Programa que permita sumar todos los valores ingresados en un vector de 12 posiciones, los valores deben ser ingresados por el usuario. 
+
+i = 0
+lista = []
+
+while i<12:
+    num = int(input("Digite un numero: "))
+    i += 1
+    lista.append(num)
+suma = sum(lista)
+print(f"La suma de los numeros es: {suma}")
+
+#54. Programa que permita llenar un vector de 20 posiciones y luego determine cuantos son positivos, cuántos son negativos y cuantos son ceros.
+
+positivos = 0
+negativos = 0
+ceros = 0
+lista = []
+
+for i in range(20):
+    num = int(input("Digite un numero: "))
+    lista.append(num)
+
+for i in lista:
+    if i > 0:
+            positivos += 1
+    elif i < 0:
+            negativos += 1
+    else:
+            ceros += 1
+
+print(f"Los numeros positivos son: {positivos}")
+print(f"Los numeros negativos son: {negativos}")
+print(f"Los ceros son: {ceros}")
+
+#55. Programa que permita llenar un vector de 20 posiciones y luego le pregunte al usuario cual posición desea ver en pantalla.
+
+lista = []
+
+for i in range(20):
+    num = int(input("Digite un numero: "))
+    lista.append(num)
+
+while True:
+    pos = int(input("Ingrese la posicion que desea ver: "))
+    if 0 <= pos < len(lista):
+        print(f"El valor en la posición {pos} es: {lista[pos]}")
+    elif pos >= 20:
+        print("Saliste del programa")
+        break
+
+
+#56. Programa que permita llenar un vector de 18 posiciones y después mostrarlo al revés.
+
+lista = []
+
+for i in range(18):
+    num = int(input("Digite un numero: "))
+    lista.append(num)
+
+invertida = list(reversed(lista))
+
+print(invertida)
+
+#57.  Programa que permita calcular la cantidad total de clientes que atienden en un mes un hotel utilizando un vector. Como entrada se debe solicitar el número de clientes que atiende el hotel cada día del mes.
+
+mes = []
+
+i = 0 
+
+while i < 30:
+    clientes = int(input(f"Cuantos clientes ingresaron el día {i+1}: "))
+    i+=1
+    mes.append(clientes)
+
+print(mes)
+
+total_cli = sum(mes)
+
+print(f"El total de clientes en el mes fue de {total_cli}")
+
+#58. Programa que permita llenar dos vectores de 12 posiciones y luego en un tercer y cuarto vector guardar la suma y resta de cada posición. Al final se deben mostrar de forma completa todas las sumas y restas realizadas. 
+
+lista1 = []
+lista2 = []
+
+for i in range(12):
+    num1 = int(input("Digite un numero para la primera lista: "))
+    num2 = int(input("Digite un numero para la segunda lista: "))
+    lista1.append(num1)
+    lista2.append(num2)
+
+suma_lista = [num1+num2 for num1, num2 in zip(lista1, lista2)]
+resta_lista = [num1-num2 for num1, num2 in zip(lista1, lista2)]
+
+print("Suma de listas por posicion")
+for i, suma in enumerate(suma_lista):
+    print(f"Posición {i+1}: {suma}")
+
+print("Resta de listas por posicion")
+for i, resta in enumerate(resta_lista):
+    print(f"Posición {i+1}: {resta}")
+
+#59. Programa que permita llenar un vector de N posiciones y luego en un segundo y tercer vector guarde el cuadrado y el cubo de cada una de las posiciones. Finalmente imprimir el contenido de todos los vectores.                            
+
+lista = []
+cuadrado = []
+cubo = []
+
+pos = int(input("Cuantas posiciones quiere en la lista: "))
+
+for i in range(pos):
+    num = int(input("Digite un numero para la lista: "))
+    lista.append(num)
+
+cuadrado_lista = [num ** 2 for num in lista]
+cubo_lista = [num ** 3 for num in lista]
+
+cuadrado.append(cuadrado_lista)
+cubo.append(cubo_lista)
+
+print(f"Los numeros de la lista la cuadrado son: \n{cuadrado}")
+print(f"Los numeros de la lista al cubo son: \n{cubo}")
+
+#60.  Programa que permita Ingresar el número de estudiantes asignados cada uno de los 20 salones de un colegio y luego satisfacer los siguientes requerimientos: a) Determinar la cantidad total de estudiantes b) Determinar el curso con mayor cantidad de estudiantes c) Determinar el curso con menor cantidad de estudiantes.
+
+curso = []
+
+for i in range(20):
+    estu = int(input(f"Cuantos estudiantes tiene el salon {i+1}: "))
+    curso.append(estu)
+
+total_estu = sum(curso)
+
+for i in curso:
+    mas_estu = max(curso)
+    i_max = curso.index(mas_estu)
+    min_estu = min(curso)
+    i_min = curso.index(min_estu)
+
+print(f"La suma de todos los salones es {total_estu}")
+print(f"El salon con mas estudiantes es {i_max+1} con {mas_estu} estudiantes")
+print(f"El salon con menos estudiantes es {i_min+1} con {min_estu} estudiantes")
+
+#61. Programa que permita solicitar 25 nombres y 25 apellidos y los muestre en forma de un único listado  
+
+nom = []
+apell = []
+
+for i in range(25):
+    nombre = input(f"Digite su nombre {i+1}: ")
+    nom.append(nombre)
+
+for i in range(25):
+    apellido = input(f"Digite su apellido {i+1}: ")
+    apell.append(apellido)
+
+for nombre, apellido in zip(nom, apell):
+    print(f"{nombre} {apellido}")
+
+#62. Programa que permita llenar una matriz y mostrar todos los datos ingresados y su respectiva posición (fila, columna) en pantalla
+
+rows = int(input("Cuantas filas desea en su matriz: "))
+columns = int(input("Cuantas columnas desea tener en su matriz: "))
+
+matrix = []
+
+for row_position in range(rows):
+    row = []
+    for elements in range(columns):
+        row.append(int(input(f"Elementos de la fila {row_position}: ")))
+    matrix.append(row)
+
+for row in matrix:
+    print(row)
+
+#63. Programa que permita llenar una matriz de 3 filas y 4 columnas y luego determine: a) La suma total de todos lo valores b) El valor promedio de todos los valores ingresados.
+
+matrix = []
+
+for rows in range(3):
+    row = []
+    for elements in range(4):
+        row.append(int(input(f"Elemento de la fila {rows}: ")))
+    matrix.append(row)
+
+for row in matrix:
+    print(row)
+
+suma = 0
+
+for rows in matrix:
+    for elements in rows:
+        suma += elements
+
+print(f"La suma de la matriz es de: {suma}")
+
+prom = suma/12
+
+print(f"El promedio de la matriz es de: {prom}")
+
+#64. Programa que permita llenar una matriz cuyo número de filas y número de columnas es ingresado por el usuario. Se le debe luego preguntar al usuario que posición de la matriz desea ver (que fila y que columna) y mostrar el contenido de esa posición. Se debe repetir la pregunta tantas veces sea necesario hasta que el usuario solicite un numero de fila o número de columna mayor al asignado a la matriz.
+
+rows = int(input("Cuantas filas quiere en la matriz: "))
+columns = int(input("Cuantas columnas quiere en la matriz: "))
+
+matriz = []
+
+for row_position in range(rows):
+    row = []
+    for elements in range(columns):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+continuar = True
+
+while continuar:
+    fila = int(input(f"Ingrese el numero de la fila que desea ver (0 a {rows-1}), o un numero mayor para salir: "))
+    if fila >= rows:
+        continuar = False
+    else:
+        columna = int(input(f"Ingrese el número de columna que desea ver (0 a {columns-1}), o un número mayor para salir: "))
+        if columna >= columns:
+            continuar = False
+        else:
+            if fila < 0 or columna < 0:
+                print("Los índices deben ser números positivos.")
+            else:
+                print(f"El elemento en la fila {fila} y columna {columna} es: {matriz[fila][columna]}")
+
+#65. Programa que permita llenar un matriz cuyo número de filas y columnas es ingresado por el usuario y luego determine cuantos números positivos, negativos y ceros fueron ingresaron.
+
+rows = int(input("Cuantas filas quiere en la matriz: "))
+columns = int(input("Cuantas columnas quiere en la matriz: "))
+
+matriz = []
+
+negativos = 0
+positivos = 0
+ceros = 0
+
+for row_position in range(rows):
+    row = []
+    for element in range(columns):
+        num = int(input(f"Digite un numero para la fila {row_position} y la columna {element}: "))
+        row.append(num)
+        if num > 0:
+            positivos += 1
+        elif num < 0:
+            negativos += 1
+        else:
+            ceros += 1
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+print(f"Los numeros positivos son: {positivos}")
+print(f"Los numeros negativos son: {negativos}")
+print(f"Los ceros son: {ceros}")
+
+
+#66. Programa que permita llenar una matriz cuyo número de filas y columnas es ingresado por el usuario, donde se busque un valor (Ingresado por el usuario) y al encontrarlo muestre su posición (fila, columna).
+
+rows = int(input("Cuantas filas quiere en la matriz: "))
+columns = int(input("Cuantas columnas quiere en la matriz: "))
+
+matriz = []
+
+for row_position in range(rows):
+    row = []
+    for elements in range(columns):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+num_buc = int(input("Que numero quiere buscar en la matriz: "))
+
+fal = False
+
+for row_position in range(rows):
+    for elements in range(columns):
+        if matriz[row_position][elements] == num_buc:
+            print(f"El valor {num_buc} se encuentra en la fila {row_position} y la columna {elements}")
+            fal = True
+            break
+    if fal:
+        break
+
+if not fal:
+    print(f"\nEl valor {fal} no se encuentra en la matriz.")
+
+#67. Programa que permita llenar una matriz cuyo número de filas y columnas es ingresado por el usuario y luego calcule la suma de cada una de sus filas (una x una).
+
+rows = int(input("Cuantas filas quiere en la matriz: "))
+columns = int(input("Cuantas columnas quiere en la matriz: "))
+
+matriz = []
+
+for row_position in range(rows):
+    row = []
+    for elements in range(columns):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+for row_position in range(rows):
+    suma_fila = sum(matriz[row_position])
+    print(f"La suma de la fila {row_position} es {suma_fila}")
+
+#68. Programa que permita llenar una matriz cuyo número de filas y columnas es ingresado por el usuario y luego calcule la suma de cada una de sus columnas (una x una)   
+
+rows = int(input("Cuantas filas quiere en la matriz: "))
+columns = int(input("Cuantas columnas quiere en la matriz: "))
+
+matriz = []
+
+for row_position in range(rows):
+    row = []
+    for elements in range(columns):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+sum_f = int(input("Que fila quiere sumar: "))
+suma = 0
+
+for row_position in range(rows):
+    for elements in range(columns):
+        if (row_position==(sum_f-1)):
+            print(matriz[row_position][elements])
+            suma += matriz[row_position][elements]
+print (f"La suma de la fila {row_position} es {suma}")
+
+#69. Programa que permita llenar una matriz cuadrada de 5 filas y 5 columnas y luego calcule la suma de su diagonal principal. La diagonal principal de una matriz cuadrada es aquella donde el número de fila es igual al número de columna) 
+
+matriz = []
+
+for row_position in range(5):
+    row = []
+    for elements in range(5):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+suma = 0
+
+for row_position in range(5):
+    suma += matriz[row_position][row_position]
+
+print(f"La suma de la diagonal es {suma}")
+
+#70. Programa que permita llenar una matriz cuadrada de 5 filas y 5 columnas y luego calcule la suma de los valores por encima y por debajo de su diagonal principal. 
+
+matriz = []
+
+for row_position in range(5):
+    row = []
+    for elements in range(5):
+        row.append(int(input(f"Elemento de la fila {row_position}: ")))
+    matriz.append(row)
+
+for row in matriz:
+    print(row)
+
+suma_u = 0
+suma_d = 0
+
+for row_position in range(5):
+    for elements in range(5):
+        if row_position < elements:
+            suma_u += matriz[row_position][elements]
+        elif row_position > elements:
+            suma_d += matriz[row_position][elements]
+
+print(f"\nLa suma de los valores por encima de la diagonal principal es: {suma_u}")
+print(f"La suma de los valores por debajo de la diagonal principal es: {suma_d}")p
