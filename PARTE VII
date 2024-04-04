@@ -1,1 +1,138 @@
 
+#48. Programa que muestre un menú al usuario que se repita las veces que sea necesario, hasta que escoja la opción salir. Las opciones del menú deben permitir:       
+#1. Ingresar 2 números 2. Realizar la suma 3. Realizar la resta 4. Realizar la multiplicación 5. Realizar la división 6. Salir del programa 
+
+continuar = True
+
+while continuar:
+    print("\t.:MENU:.") 
+    print("1. Ingresar 2 números")
+    print("2. Realizar la suma")
+    print("3. Realizar la resta")
+    print("4. Realizar la multiplicación")
+    print("5. Realizar la división")
+    print("6. Salir del programa")
+    op = int(input("Elige una opción: "))
+    if op == 1:
+        num1 = int(input("Digite un numero: "))
+        num2 = int(input("Digite un numero: "))
+    elif op == 2:
+        suma = num1+num2
+        print(f"El resultado de la suma es {suma}")
+    elif op == 3:
+        resta = num1-num2
+        print(f"El resultado de la suma es {resta}")
+    elif op == 4:
+        mult = num1*num2
+        print(f"El resultado de la suma es {mult}")
+    elif op == 5:
+        div = num1/num2
+        print(f"El resultado de la suma es {div}")
+    elif op == 6:
+        continuar = False
+        print("Saliste del programa")
+    else: 
+        print("Error")
+
+#49. Programa que muestre un menú al usuario que se repita las veces que sea necesario, hasta que escoja la opción Salir. Las opciones del menú deben permitir:    
+#1. Calcular el factorial de un número (usando un ciclo repetitivo for) 2. Calcular la potencia (usando un ciclo repetitivo while) 3. Salir 
+
+continuar = True
+
+while continuar:
+    print("\t.:MENU:.") 
+    print("1. Calcular el factorial de un número")
+    print("2. Calcular la potencia")
+    print("3. Salir")
+    op = int(input("Elige una opción: "))
+    if op == 1:
+        n = int(input("Digite un numero positivo: "))
+        if n < 0:
+            print("Error")
+            n = int(input("Digite un numero positivo: "))
+        else:
+            resultado = 1
+            for i in range(n):
+                resultado *= n
+                n -= 1
+        print(f"El factorial es {resultado}")
+    elif op == 2:
+
+        resultado = 1
+        contador = 0
+
+        base = float(input("Ingresa la base: "))
+        exponente = int(input("Ingrese el exponente en numero positivo: "))
+
+        while contador < exponente:
+            resultado*= base
+            contador+=1
+
+        if exponente < 0: 
+            print("Digite un numero positivo")
+        else: 
+            resultado = base**exponente
+            print(f"{base} elevado a la {exponente} es: {resultado}")
+    elif op == 3:
+        print("Saliste del programa")
+        break
+    else: 
+        print("Error")
+        
+#50. Programa que muestre un menú al usuario que se repita las veces que sea necesario, hasta que escoja la opción Salir. Las opciones del menú deben permitir:    
+#1. Números pares hasta 100 (usando for) 2. Múltiplos de 4 (usando while) 3. Tabla de Multiplicar de un número hasta 10  
+
+seguir = True
+            
+while seguir:
+    print("\t.:MENU:.") 
+    print("1. Números pares hasta 100")
+    print("2. Múltiplos de 4")
+    print("3. Tabla de Multiplicar de un número hasta 10")
+    print("4. Salir")
+    op = int(input("Elige una opción: "))
+    if op == 1:
+        for i in range(1, 101):
+            if i%2 == 0:
+                print (i)
+    elif op == 2:
+        i = 0
+        while i < 100:
+            i+=1
+            if i%4 == 0:
+                print(i)
+    elif op == 3: 
+        num = int(input("Digite un numero: "))
+        for i in range(1, 11):
+            tabla = num * i
+            print(f"{num} * {i} : {tabla}")
+    elif op == 4:
+        print("Saliste del programa")
+        seguir = False
+    else:
+        print("Error")
+
+#51. Programa que permita almacenar 10 valores en un vector que represente las edades de 10 personas y luego muestre cada uno de los valores ingresados.
+
+personas = 10
+i = 0
+lista = []
+
+while i < personas:
+    edad = int(input("Cual es su edad: "))
+    i += 1
+    lista.append(edad)
+print(lista)
+
+#52. Programa que permita solicitar 15 nombres, almacenarlos en un vector y luego los muestre en el orden ingresado.
+
+personas = 15
+i = 0
+lista = []
+
+while i<personas:
+    nom = input("Cual es su nombre: ")
+    i += 1
+    lista.append(nom)
+print(lista)
+
