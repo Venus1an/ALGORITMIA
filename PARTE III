@@ -49,24 +49,24 @@ else:
 
 #26. Programa que permita ingresar un número cualquiera y luego mostrar el siguiente menú: 1. Determinar si es positivo o negativo 2. Determinar si es par o impar. El programa debe realizar las operaciones que el usuario seleccione del menú.
 
-num = int(input("Digite un numero: "))
-
-print("\t.:MENU:.")
-print("1. Determinar si es positivo o negativo.")
-print("2. Determinar si es par o impar.")
-
-n = int(input("Elija una opción: "))
-
-if n == 1:
-    if num > 0:
-        print("El numero es positivo")
+n=int(input("Ingrese un numero:\n"))
+m=int(input("Seleccione una opción:\n1.Determinar si el # es + o -\n2.Determinar si el # es par o impar\n"))
+if m==1:
+    print("+ o -?")
+    if n<0:
+        print(n, "es negativo")  
+    elif n>0:
+        print(n, "es positivo")
     else:
-        print("El numero es negativo")
-elif n == 2:
-    if num % 2 == 0:
-        print("El numero es par")
-    else: 
-        print("El numero es impar")
+        print()
+elif m==2:
+    print("Par o Impar?")
+    if  n% 2 == 0:
+        print("Es par.")
+    else:
+        print("El número es impar.")
+else:
+    print("esta opcion no es valida")
 
 #27. Programa que muestre un menú que tenga las siguientes opciones: 1. Pasa o no la materia? 2. Es mayor o menor de edad? Caso 1: Solicitar 3 notas y determinar si el promedio es mayor a 3.0, en ese caso el estudiante pasa. Caso 2: Se debe solicitar el año de nacimiento y el año actual y determinar si es o no mayor de edad.
 
