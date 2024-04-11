@@ -70,31 +70,28 @@ else:
 
 #27. Programa que muestre un menú que tenga las siguientes opciones: 1. Pasa o no la materia? 2. Es mayor o menor de edad? Caso 1: Solicitar 3 notas y determinar si el promedio es mayor a 3.0, en ese caso el estudiante pasa. Caso 2: Se debe solicitar el año de nacimiento y el año actual y determinar si es o no mayor de edad.
 
-print("\t.:MENU:.")
-print("1. Pasa o no la materia")
-print("2. Es mayor o menor de edad")
+print("\tMENU")
+print("Seleccione una opcion\n1.Definir si estudiante aprueba la materia\n2.Determinar si el estudiante es mayor o menor de edad")
+m=int(input())
 
-n = int(input("Eliga una opción: "))
 
-if n == 1:
-    nota1 = float(input("Digite la primera nota: "))
-    nota2 = float(input("Digite la segunda nota: "))
-    nota3 = float(input("Digite la tercera nota: "))
-    prom = (nota1+nota2+nota3)/3
-    if prom >= 3.0:
-        print("¡Paso la materia!")
+if m==1:
+    a=float(input("Ingrese la 1ra nota:"))
+    b=float(input("Ingrese la 2da nota:"))
+    c=float(input("Ingrese la 3ra nota:"))
+    d=(a+b+c)/3
+    if d>3.0:
+        print("PROMEDIO: ", d,"APRUEBA")
     else:
-        print("No pasas la materia")
-elif n == 2:
-    año_ac = int(input("Año actual: "))
-    año_na = int(input("Año de nacimiento: "))
-    edad = año_ac-año_na
-    if edad >= 18:
-        print("Eres mayor de edad")
-    else: 
-        print("Eres menor de edad")
-else:
-    print("Error")
+        print("PROMEDIO: ", d, "REPROBADO")
+if m==2:
+    e=int(input("Ingrese año de nacimiento: "))
+    f=int(input("Ingrese año actual: "))
+    g= f-e
+    if g>=18:
+        print("El estudiante es mayor de edad.")
+    else:
+        print("El estudiante es menor de edad.") 
 
 #28. Programa que permita ver los números naturales comprendidos entre 0 y 1000
 
